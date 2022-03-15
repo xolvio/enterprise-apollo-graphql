@@ -12,37 +12,35 @@ describe("GraphQL schema", () => {
   test("how to test it", async () => {
     const schema = await readFile(path.join(__dirname, "example.gql"));
     const ast = parse(schema);
-    expect(ast).toEqual(
-      objectContaining({
-        definitions: arrayContaining([
-          objectContaining({
-            kind: "ObjectTypeDefinition",
-            name: objectContaining({
-              kind: "Name",
-              value: "Project",
-            }),
-            fields: arrayContaining([
-              objectContaining({
-                kind: "FieldDefinition",
-                name: objectContaining({
-                  kind: "Name",
-                  value: "id",
-                }),
-                type: objectContaining({
-                  kind: "NonNullType",
-                  type: objectContaining({
-                    kind: "NamedType",
-                    name: objectContaining({
-                      kind: "Name",
-                      value: "ID",
-                    }),
-                  }),
-                }),
-              }),
-            ]),
-          }),
-        ]),
-      })
-    );
+    expect(ast).toMatchObject({
+      definitions: [
+        {
+          kind: "ObjectTypeDefinition",
+          name: {
+            kind: "Name",
+            value: "Project",
+          },
+          fields: [
+            {
+              kind: "FieldDefinition",
+              name: {
+                kind: "Name",
+                value: "id",
+              },
+              type: {
+                kind: "NonNullType",
+                type: {
+                  kind: "NamedType",
+                  name: {
+                    kind: "Name",
+                    value: "ID",
+                  },
+                },
+              },
+            },
+          ],
+        },
+      ],
+    });
   });
 });
