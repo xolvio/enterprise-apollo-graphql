@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "incremental": true,
+    "target": "es2022",
+    "module": "es2022",
+    "lib": ["ESNext"],
+    "allowJs": true,
+    "checkJs": false,
+    "jsx": "react",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "outDir": "./build/",
+    "rootDir": "./src/",
+    "composite": true,
+    "tsBuildInfoFile": "tsconfig.tsbuildinfo",
+    "isolatedModules": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "preserveSymlinks": false,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "newLine": "lf",
+    "importsNotUsedAsValues": "error"
+  },
+  "include": ["./src/**/*"]
+}
