@@ -1,0 +1,7 @@
+type Task {
+    id: ID!
+    name: String
+    estimate: String
+    completed: Boolean
+    assignee: Developer
+}

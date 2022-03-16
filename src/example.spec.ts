@@ -5,7 +5,7 @@ import { expectGraphQLFileToMatch } from "./testing.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-describe("GraphQL schema", () => {
+describe.skip("GraphQL schema", () => {
   test("how to test it", async () => {
     await expectGraphQLFileToMatch(
       path.join(__dirname, "example.gql"),
