@@ -25,5 +25,8 @@
     "newLine": "lf",
     "importsNotUsedAsValues": "error"
   },
+  "ts-node": {
+    "esm": true
+  },
   "include": ["./src/**/*"]
 }

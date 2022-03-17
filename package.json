@@ -12,6 +12,7 @@
   "dependencies": {
     "@jest/globals": "^27.5.1",
     "@sanjo/read-file": "^2.0.0",
+    "apollo-server": "^3.6.4",
     "graphql": "^16.3.0"
   },
   "devDependencies": {

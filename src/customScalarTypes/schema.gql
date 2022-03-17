@@ -1,0 +1,11 @@
+type Query {
+  tasks: [Task!]!
+  tasksCreatedAfter(date: Date!): [Task!]!
+}
+
+scalar Date
+
+type Task {
+  id: ID!
+  createdAt: Date!
+}
