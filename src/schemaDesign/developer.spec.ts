@@ -5,8 +5,8 @@ import { determineDirname } from "../utils/determineDirname.js";
 
 const __dirname = determineDirname(import.meta.url);
 
-describe("GraphQL schema", () => {
-  test("Verify Developer Type", async () => {
+describe.skip("Schema design", () => {
+  test("Developer type", async () => {
     await expectGraphQLFilesToMatch(
       join(__dirname, "developer.gql"),
       join(__dirname, "developer-complete.gql")

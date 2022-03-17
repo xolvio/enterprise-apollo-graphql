@@ -1,5 +1,0 @@
-type Developer {
-    id: ID
-    name: String
-    tasks: [Task
-}
