@@ -14,10 +14,10 @@ function expectASTToMatch(
 }
 
 export async function expectGraphQLFilesToMatch(
-  actualfilePath: string,
+  actualPath: string,
   expectedPath: string
 ): Promise<void> {
-  const actualSchema = await readFile(actualfilePath);
+  const actualSchema = await readFile(actualPath);
   const actualAst = parse(actualSchema);
 
   const expectedSchema = await readFile(expectedPath);
