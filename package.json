@@ -10,12 +10,13 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@jest/globals": "^27.5.1",
     "@sanjo/read-file": "^2.0.0",
+    "@xolvio/graphql-verification": "^1.0.1",
     "apollo-server": "^3.6.4",
     "graphql": "^16.3.0"
   },
   "devDependencies": {
+    "@jest/globals": "^27.5.1",
     "@types/jest": "^27.4.1",
     "@types/node": "^16.11.26",
     "husky": "^7.0.4",

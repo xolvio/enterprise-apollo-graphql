@@ -1,6 +1,7 @@
 import { expect } from "@jest/globals";
 import { readFile } from "@sanjo/read-file";
 import { DocumentNode, parse as parseBase, Source } from "graphql";
+import { createVerificationRules } from "@xolvio/graphql-verification";
 
 export function parse(source: string | Source): DocumentNode {
   return parseBase(source, { noLocation: true });
@@ -18,10 +19,9 @@ export async function expectGraphQLFilesToMatch(
   expectedPath: string
 ): Promise<void> {
   const actualSchema = await readFile(actualPath);
-  const actualAst = parse(actualSchema);
 
   const expectedSchema = await readFile(expectedPath);
-  const expectedAst = parse(expectedSchema);
+  const verificationRules = createVerificationRules(expectedSchema);
 
-  expectASTToMatch(actualAst, expectedAst);
+  expect(actualSchema).toPassVerificationRules(verificationRules);
 }

@@ -14,4 +14,7 @@ module.exports = {
   testMatch: ["<rootDir>/src/**/*.spec.ts"],
   injectGlobals: false,
   transform: {},
+  setupFilesAfterEnv: [
+    './src/testSetup.ts'
+  ]
 };
