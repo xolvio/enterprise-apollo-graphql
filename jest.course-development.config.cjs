@@ -5,8 +5,5 @@ const baseConfig = require('./jest.base.config.cjs')
  */
 module.exports = {
   ...baseConfig,
-  testPathIgnorePatterns: [
-    "/node_modules/",
-    "<rootDir>/src/courseDevelopment/"
-  ],
+  testMatch: ["<rootDir>/src/courseDevelopment/**/*.(spec|test).ts"],
 };

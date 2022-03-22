@@ -8,6 +8,14 @@ npm install
 
 ## Running tests
 
+### Running in watch mode
+
+```sh
+npm run test:watch
+```
+
+### Running once
+
 ```sh
 npm test
 ```

@@ -6,5 +6,11 @@ export default function () {
         runner: "--experimental-vm-modules",
       },
     },
+    files: {
+      override(filePatterns) {
+        filePatterns.push("src/**/*.gql");
+        return filePatterns;
+      },
+    },
   };
 }
